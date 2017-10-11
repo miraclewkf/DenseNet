@@ -5,7 +5,6 @@ import logging
 
 from metric import *
 
-import logging
 logger = logging.getLogger()
 logger.setLevel(logging.INFO)
 

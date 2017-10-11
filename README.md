@@ -1,5 +1,5 @@
 # Densely Connected Convolutional Network (DenseNet)
-paper: ["Densely Connected Convolutional Networks"](http://arxiv.org/abs/1608.06993)
+paper: [Densely Connected Convolutional Networks](http://arxiv.org/abs/1608.06993)
 
 ### This is the MXNet implement of DenseNet with pretrained model, therefor you can fine-tune in the pretrained model for your own dataset.
 
