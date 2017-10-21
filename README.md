@@ -7,12 +7,12 @@ paper: [Densely Connected Convolutional Networks](http://arxiv.org/abs/1608.0699
 
 * Download pretrained models(pretrained in ImageNet dataset) from
 
-|Network 			   |     MXNet model|
-|:-------------------: |:--------------:| 
-|DenseNet-121 (k=32)   |[Google Drive (32.3MB)](https://drive.google.com/open?id=0ByXcv9gLjrVcb3NGb1JPa3ZFQUk)|
-|DenseNet-169 (k=32)   |[Google Drive (57.3MB)](https://drive.google.com/open?id=0ByXcv9gLjrVcOWZJejlMOWZvZmc)|
-|DenseNet-201 (k=32)   |[Google Drive (81.0MB)](https://drive.google.com/open?id=0ByXcv9gLjrVcUjF4MDBwZ3FQbkU)|
-|DenseNet-161 (k=48)   |[Google Drive (115.7MB)](https://drive.google.com/open?id=0ByXcv9gLjrVcS0FwZ082SEtiUjQ)|
+|Network 			   | Top-1 error |     MXNet model|
+|:-------------------: | :----------:|:--------------:| 
+|DenseNet-121 (k=32)   |	25.16  	 |[Google Drive (32.3MB)](https://drive.google.com/open?id=0ByXcv9gLjrVcb3NGb1JPa3ZFQUk)|
+|DenseNet-169 (k=32)   |	23.74	 |[Google Drive (57.3MB)](https://drive.google.com/open?id=0ByXcv9gLjrVcOWZJejlMOWZvZmc)|
+|DenseNet-201 (k=32)   |	22.54	 |[Google Drive (81.0MB)](https://drive.google.com/open?id=0ByXcv9gLjrVcUjF4MDBwZ3FQbkU)|
+|DenseNet-161 (k=48)   |	22.28	 |[Google Drive (115.7MB)](https://drive.google.com/open?id=0ByXcv9gLjrVcS0FwZ082SEtiUjQ)|
 
 These pretrained models are manually converted from https://github.com/shicai/DenseNet-Caffe ,put the pretrained model under `/DenseNet/model/` file.
 
