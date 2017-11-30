@@ -18,7 +18,7 @@ def multi_factor_scheduler(begin_epoch, epoch_size, step=[5,10], factor=0.1):
     step_ = [epoch_size * (x-begin_epoch) for x in step if x-begin_epoch > 0]
     return mx.lr_scheduler.MultiFactorScheduler(step=step_, factor=factor) if len(step_) else None
 
-def train_model(model, gpus, batch_size, image_shape, epoch=0, num_epoch=20, kv='device'):
+def train_model(model, gpus, epoch=0, num_epoch=20, kv='device'):
     train = mx.io.ImageRecordIter(
         path_imgrec         = args.data_train,
         label_width         = 1,
@@ -52,8 +52,6 @@ def train_model(model, gpus, batch_size, image_shape, epoch=0, num_epoch=20, kv=
         num_parts           = kv.num_workers,
         resize              = 224,
         part_index          = kv.rank)
-
-    kv = mx.kvstore.create(args.kv_store)
 
     prefix = model
     sym, arg_params, aux_params = mx.model.load_checkpoint(prefix, epoch)
@@ -152,5 +150,4 @@ if __name__ == '__main__':
     # record the information of args
     logging.info(args)
 
-    train_model(model=args.model, gpus=args.gpus, batch_size=args.batch_size,
-          image_shape='3,224,224', epoch=args.epoch, num_epoch=args.num_epoch, kv=kv)
+    train_model(model=args.model, gpus=args.gpus, epoch=args.epoch, num_epoch=args.num_epoch, kv=kv)
